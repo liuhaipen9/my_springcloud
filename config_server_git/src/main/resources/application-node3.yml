@@ -1,0 +1,29 @@
+spring:
+ application:
+  name: config-server
+ cloud:
+  config:
+    server:
+      git:
+        uri: https://github.com/liuhaipen9/my-config.git
+server:
+  port: 9203
+
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://localhost:8001/eureka/
+
+#\u5BF9\u79F0\u52A0\u5BC6
+#encrypt:
+  #key: liuhp
+
+#\u975E\u5BF9\u79F0\u52A0\u5BC6
+encrypt:
+ key-store.location: file:/Users/liuhaipeng/roc-work/workspace/ams/springcloud/my_springcloud/config_server_git/src/main/resources/config-server.keystore
+ key-store.alias: config-server
+ key-store:
+   password: 111111
+   secret: 222222
+
+

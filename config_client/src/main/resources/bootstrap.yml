@@ -1,0 +1,22 @@
+spring:
+ application:
+   name: config-client
+ cloud:
+   config:
+     #uri: http://localhost:9201/
+     discovery:
+       enabled: true
+       #\u6307\u5B9A\u914D\u7F6E\u4E2D\u5FC3\u7684eureka\u540D\u5B57\u5C31\u53EF\u4EE5\u8D1F\u8F7D\u5747\u8861\u914D\u7F6E\u4E2D\u5FC3
+       serviceId: config-server
+     profile: dev
+     label: master
+
+server:
+  port: 9302
+
+
+eureka:
+  client:
+    serviceUrl:
+       defaultZone: http://localhost:8001/eureka/
+
