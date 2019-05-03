@@ -19,18 +19,24 @@ public class DcCountroller {
     @Autowired
     DiscoveryClient discoveryClient;
 
-    @Value("${info}")
-    private String info;
+
 
     @GetMapping("/dc")
     public String dc(){
+        //模拟hystriy
+        /*try {
+            Thread.sleep(6000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         String services="Service:"+discoveryClient.getServices();
         log.info("eureka客户端返回参数:{}",services);
         return services;
     }
 
-    @GetMapping("configtest")
-    public String configTest(){
-        return info;
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
     }
+
 }

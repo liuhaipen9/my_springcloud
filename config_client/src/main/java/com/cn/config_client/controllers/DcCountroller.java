@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DcCountroller {
 
 
-    @Value("${info}")
+    @Value("${info.profile}")
     private String info;
 
 

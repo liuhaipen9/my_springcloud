@@ -12,7 +12,7 @@ spring:
      label: master
 
 server:
-  port: 9302
+  port: 9301
 
 
 eureka:
